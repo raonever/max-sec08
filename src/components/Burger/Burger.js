@@ -6,12 +6,12 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 const burger = (props) => {
     let transformedIngredients = Object.keys(props.ingredients)
         .map(igKey => {                                              // 첫번째 map은 기존 배열에서 value(갯수)만 추출
-            return [...Array(props.ingredients[igKey])].map( (_, i) => {     // i 값은 (0, 0, 0, 1, 0, 1)
+            return [...Array(props.ingredients[igKey])].map( (_, i) => {     // i 값은 (0, 0, 0, 1, 0, 1)  // 2번째 map에서 출력
                 return <BurgerIngredient key={igKey + i} type={igKey} />;
             });
         })
-        .reduce((arr, el) => {
-            return arr.concat(el)
+        .reduce((arr, el) => {                  // reduce() : 배열의 두 값 (왼쪽에서 오른쪽으로)에 대해 동시에 함수를 적용하여 단일 값으로 줄입니다. 
+            return arr.concat(el)               // concat() : 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다. 
         }, []);
     if (transformedIngredients.length === 0) {
         transformedIngredients = <p>Please start adding ingredients!</p>
