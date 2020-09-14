@@ -24,7 +24,8 @@ const buildControls = (props) => (
         <button 
             className={classes.OrderButton}
             // 구매할 수 없는 경우 true로 설정
-            disabled={!props.purchasable}>ORDER NOW</button>            
+            disabled={!props.purchasable}
+            onClick={props.ordered}>ORDER NOW</button>            
     </div>
 );
 
