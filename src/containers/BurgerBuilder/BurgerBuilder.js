@@ -79,6 +79,10 @@ class BurgerBuilder extends Component {
         this.setState({purchasing: true});
     }
 
+    purchaseCancelHandler = () => {
+        this.setState({purchasing: false});
+    }
+
     render () {
         const disabledInfo = {          
             ...this.state.ingredients                   // 렌더링하면서 랜더링된 값을 불러들임 {salad: 0, bacon: 0, ...}
@@ -90,7 +94,7 @@ class BurgerBuilder extends Component {
         // {salad: true, meat: false, ...}
         return (
             <Auxiliary>
-                <Modal show={this.state.purchasing}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary ingredients={this.state.ingredients} />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
