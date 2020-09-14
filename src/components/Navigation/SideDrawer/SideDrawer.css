@@ -6,11 +6,7 @@
     left: 0;
     top: 0;
     z-index: 200;
-<<<<<<< HEAD
     background-color: white;
-=======
-    background-color: red;
->>>>>>> 7ee5de2ca834cf40e1ddbd1cf8511ce0c68028e7
     padding: 32px 16px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
@@ -28,11 +24,8 @@
 
 .Close {
     transition: translateX(-100%);
-<<<<<<< HEAD
 }
 
 .Logo {
     height: 11%;
-=======
->>>>>>> 7ee5de2ca834cf40e1ddbd1cf8511ce0c68028e7
 }
