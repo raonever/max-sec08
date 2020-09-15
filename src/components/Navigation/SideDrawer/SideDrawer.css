@@ -21,9 +21,9 @@
 .Open {
     transform: translateX(0);
 }
-
+/* 실수: transition(-100%) ===> 열고 닫기 동작 안함 */
 .Close {
-    transition: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .Logo {
